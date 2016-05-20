@@ -1,0 +1,97 @@
+<ion-view view-title="Instructions">
+  <ion-content class="">
+
+ 	<div class="list">
+
+	  <div class="item item-divider">
+	    TempoDay
+	  </div>
+	  <div class="item">
+	    Practice your rhythm by tapping tempos!
+	  </div>
+
+	  <ion-list>
+        <div ng-repeat="group in sideEffects">
+          <ion-item class="item-stable item-divider"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
+
+	  <div class="item item-divider">
+	    Instructions
+	  </div>
+	  <div class="item">
+	    Tap a rhyhtm: <span class="rhythText">q h &nbsp; w</span>
+	  </div>
+	  <ion-list>
+        <div ng-repeat="group in notes">
+          <ion-item class="item-stable item-divider"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            <span class="rhythText">{{item.noteValue}}</span> {{item.text}}
+          </ion-item>
+        </div>
+      </ion-list>
+
+      <ion-list>
+        <div ng-repeat="group in rests">
+          <ion-item class="item-stable item-divider"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            <span class="rhythText">{{item.noteValue}}</span> {{item.text}}
+          </ion-item>
+        </div>
+      </ion-list>
+
+      <ion-list>
+        <div ng-repeat="group in advancedNotes">
+          <ion-item class="item-stable item-divider"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            <span class="rhythText">{{item.noteValue}}</span> {{item.text}}
+          </ion-item>
+        </div>
+      </ion-list>
+
+	  <div class="item item-divider">
+	    Sample GamePlay
+	  </div>
+	  <div class="item">
+	    <!-- <span class="rhythText">w</span>or whole note lasts for four beats. -->
+	    Gif animation of GamePlay coming soon.
+	  </div>
+
+	</div>
+  </ion-content>
+</ion-view>

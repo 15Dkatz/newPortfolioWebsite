@@ -1,0 +1,182 @@
+@font-face {
+	font-family: "Rhyth";
+	src: url("fonts/Rhyth.otf") format("opentype");
+}
+
+
+body {
+	text-align: center;
+	font-size: 2rem;
+
+	/* Randomly select a darken-1 for the color */
+	background: #039be5;
+	color: white;
+}
+
+#pulsateParent {
+	position: relative;
+}
+
+#pulsate {
+	position: absolute;
+}
+
+.pulse {
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ffffff;
+	background-color: #eeeeee;
+	-webkit-animation: pulsate 0.67s ease-out;
+	   /*-webkit-animation-iteration-count: infinite;*/
+	/*opacity: 0.5;*/
+	-webkit-filter: opacity(.4);
+  	filter: opacity(.4); 
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+        -webkit-transform: scale(0.1, 0.1);
+		-webkit-filter: opacity(.1);
+  		filter: opacity(.1); 
+	}
+	50% {
+		-webkit-filter: opacity(.2);
+  		filter: opacity(.2); 
+	}
+	100% {
+	/* -webkit-transform: scale(1, 1); */
+		-webkit-filter: opacity(.4);
+  		filter: opacity(.4); 
+	}
+}
+
+
+/*Color Collection*/
+/*#fdd835 yellow darken-1
+#43a047 green darken-1
+#fb8c00 orange darken-1
+#f4511e deep-orange darken-1
+#039be5 light-blue darken-1
+#00897b teal darken-1
+#1e88e5 blue darken-1
+#e53935 red darken-1
+#d81b60 pink darken-1*/
+/*.yellow {
+	background-color: #fdd835;
+}
+*/
+.green {
+	background-color: #43a047;
+}
+
+.orange {
+	background-color: #fb8c00;
+}
+
+.deep-orange {
+	background-color: #f4511e;
+}
+
+.light-blue {
+	background-color: #039be5;
+}
+
+.teal {
+	background-color: #1e88e5;
+}
+
+.blue {
+	background-color: #1e88e5;
+}
+
+.red {
+	background-color: #e53935;
+}
+
+.pink {
+	background-color: #d81b60;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: relative;
+}
+
+#page1, #page2, #page3 {
+	/*display: inline-block;*/
+	position: absolute;
+}
+
+#page1 {
+	display: inline-block;
+	/*right: %;*/
+	width: 82%;
+	right: 9%;
+	padding: 10%;
+	line-height: 180%;
+}
+
+#page3 {
+	bottom: 22.5%;
+}
+
+.directions {
+	font-size: 3rem;
+}
+
+.pageCollection {
+	width: 100%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	/*right: 50%;*/
+	/*transform: translateX(%);*/
+}
+
+.show {
+	display: inline-block;
+	z-index: 5;
+}
+
+.highZ {
+	z-index: 3;
+}
+
+.lowZ {
+	z-index: 1;
+}
+
+.levelDirections {
+	margin: 2%;
+	font-size: 2.3rem;
+}
+
+.button {
+	width: 40%;
+	font-size: 2.5rem;
+	border: 2.5px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: #fff;
+	margin: 1%;
+	padding: 1%;
+	transform: translateX(72.5%);
+}
+
+#gameRhythmDisplay, #test {
+	font-family: "Rhyth";
+	width: 80%;
+	margin-left: 10%;
+	font-size: 4.5rem;
+	letter-spacing: 0.1rem;
+}
+
+#drum {
+	font-size: 5rem;
+}
+

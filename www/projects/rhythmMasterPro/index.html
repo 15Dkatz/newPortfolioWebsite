@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mastering Ryhthm</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css"></link>
+		<link rel="stylesheet" href="main.css">	
+	</head>
+	<body>
+		<div ng-app="rhythmAppPro">
+			<div ng-controller="rhythmProController">
+				<div class="beginDisplay page" id="page1">
+					<div class="pageCollection">	
+						<div class="directions"> The game will display a random rhythm. Click and hold the mouse button to measure your accuracy with the tempo.</div>
+						<div ng-click="changeLevel()" class="levelDirections">Click to change Level. Level: {{globalLevel}}</div>
+						<div ng-click="generateGRhythm()" class="button">Begin</div>
+					</div>
+				</div>
+				<div class="gameDisplay page" id="page2" ng-mousedown="startTime()" ng-mouseup="stopTime()">
+					<div id="pulsateParent">
+						<div id="pulsate"></div>
+					</div>
+					<div class="pageCollection">
+						<div id="gameRhythmDisplay">{{gameRhythmDisplay}}</div>
+						<!-- <div id="test">{{test}}</div> -->
+					</div>	
+				</div>
+				<div class="userDisplay page" id="page3">
+					<div class="pageCollection">
+						<div id="accuracy" class="directions">On tempo accuracy: {{accuracy}}%</div>
+						<div ng-click="changeLevel()" class="levelDirections">Click to change Level. Level: {{globalLevel}}</div>
+						<span ng-click="tryAgain()" class="button">Try Again </span><span ng-click="generateGRhythm()" class="button"> Next</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<footer>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="http://code.angularjs.org/1.2.0rc1/angular-sanitize.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+		<script src="jsLibraries/wad.js"></script>
+		<script src="index.js"></script>
+	</footer>
+</html>

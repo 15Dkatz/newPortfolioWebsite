@@ -263,3 +263,12 @@ nav a.button-collapse {
 footer.page-footer {
     margin-top: 0px !important;
 }
+
+.profPic {
+    border-radius: 50%;
+    border: solid;
+    border-color: #42a5f5;
+    border-width: 5px;
+    width: 200px;
+    height: 200px;
+}

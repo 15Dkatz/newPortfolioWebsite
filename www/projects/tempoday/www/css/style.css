@@ -1,0 +1,179 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+	font-family: "Rhyth";
+	src: url("../fonts/Rhyth.otf") format("opentype");
+}
+
+.rhythText {
+	font-family: "Rhyth";
+	width: 80%;
+	margin-left: 10%;
+	font-size: 1.9rem;
+	letter-spacing: 0.1rem;
+	line-height: 2.7rem;
+	text-align: center;
+}
+
+.drum {
+	width: 100%;
+	height: 55vh;
+	text-align: center;
+	background: #fff;
+	position: relative;
+}
+
+.container {
+	width: 80%;
+	margin-left: 10%;
+}
+
+
+.drumTap {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	/*background: #fff;*/
+/*	left: 50px;
+	top: 50px;*/
+	border-radius: 50%;
+
+}
+
+.popCircle {
+	/*background: #888;*/
+	
+	width: 50px;
+	height: 50px;
+}
+
+
+.cornerCircle {
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+	top: 50%;
+}
+
+.animated {
+	background: #F8F8F8;
+}
+
+#cornerCircle1 {
+	right: -50%;
+	/*background: rgb(255, 0, 0);*/
+	/*background: #F8F8F8;*/
+}
+
+#cornerCircle2 {
+	left: -50%;
+	/*background: rgb(0, 255, 0);*/
+	/*background: #F8F8F8;*/
+}
+
+/*change width and height in one go*/
+/*Can I set the width and height to a percentage? Perhaps vh and vw in order to dynamically resize the pulsating circles?*/
+.cornerCircle, .pulse {
+	width: 375px;
+	height: 375px;
+}
+
+.pulse {
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff;
+	background-color: #eee;
+	z-index: 2;
+	-webkit-animation: pulsate 0.67s ease-out;
+    -webkit-animation-iteration-count: 4;
+	-webkit-filter: opacity(.4);
+  	filter: opacity(.4); 
+}
+
+.pulseTouch {
+	width: 75px;
+	height: 75px;
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+        -webkit-transform: scale(0.1, 0.1);
+		-webkit-filter: opacity(.1);
+  		filter: opacity(.1); 
+	}
+	50% {
+		-webkit-filter: opacity(.2);
+  		filter: opacity(.2); 
+	}
+	100% {
+	/* -webkit-transform: scale(1, 1); */
+		-webkit-filter: opacity(.4);
+  		filter: opacity(.4); 
+	}
+}
+
+
+.light {
+	background: #fff;
+	width: 1px;
+	height: 1px;
+}
+
+.green {
+	background-color: #43a047;
+}
+
+.orange {
+	background-color: #fb8c00;
+}
+
+.deep-orange {
+	background-color: #f4511e;
+}
+
+.light-blue {
+	background-color: #039be5;
+}
+
+.teal {
+	background-color: #1e88e5;
+}
+
+.blue {
+	background-color: #1e88e5;
+}
+
+.red {
+	background-color: #e53935;
+}
+
+.pink {
+	background-color: #d81b60;
+}
+
+.title {
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+.instructions {
+	text-align: center;
+	font-size: 1rem;
+}
+
+
+/*darken the pulsate as the seconds pass!*/
+
+.list .item.item-accordion {
+	line-height: 38px;
+	padding-top: 0;
+	padding-bottom: 0;
+	transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+	line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+	display: block !important;
+}

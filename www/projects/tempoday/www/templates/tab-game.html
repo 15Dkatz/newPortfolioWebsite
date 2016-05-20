@@ -1,0 +1,51 @@
+<ion-view view-title="Game">
+  <ion-content class="">
+    <!-- Page to control the rhythm game. Use game.js && rhythm.js. -->
+    <div class="">
+      <div class="bar bar-light subheader">
+        <h1 class="title">Accuracy: {{accuracy}}%</h1>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="rhythText">{{gameRhythmDisplay}}</div>
+
+    <div class="list">
+      <div class="row topButtons">
+        <div class="col col-50">
+          <div class="container">
+            <button class="button button-block" ng-click="generateGRhythm({{globalLevel}})">New</button>
+          </div>
+        </div>
+        <div class="col col-50">
+        <div class="container">
+          <button class="button button-block" ng-click="changeLevel()">Level: {{globalLevel}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="drum" on-touch="startTime($event)" on-release="stopTime()">
+      <!-- <div class="drumTap {{popColor}} {{pulse}} pulseTouch"></div> -->
+      
+      <!-- place four circles in each corner -->
+      <!-- pass in the div ID or a model to a pulsation method that pulsates the div element based on touch -->
+      <div class="cornerCircle  {{pulse1}} {{animated}}" id="cornerCircle1" on-touch="pulsateCorners('cc1')" ng-model="cornerCircle1" ></div>
+      <div class="cornerCircle  {{pulse2}} {{animated}}" id="cornerCircle2" on-touch="pulsateCorners('cc2')" ng-model="cornerCircle2"></div>
+      <!-- <div class="cornerCircle" id="cornerCircle3"></div> -->
+      <!-- <div class="cornerCircle" id="cornerCircle4"></div> -->
+
+
+<!-- 
+      <style>
+        /*p    {color:green;}*/
+
+        .drumTap {
+          left: {{drumX-37.5}}px;
+          top: {{drumY-37.5}}px;
+          /*top: {{drumY}};*/
+        }
+      </style> -->
+    </div>  
+  </ion-content>
+</ion-view>
