@@ -279,3 +279,11 @@ footer.page-footer {
     width: 8.15%;
     height: 8.15%;
 }
+
+.downArrowContainer {
+    position: absolute;
+    margin-top: -190px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
